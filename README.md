@@ -7,18 +7,9 @@ This project is a dummy project to give you a quick start.
 ## Documentation
 Documentation is available at https://igor875126.github.io/new-engine-docs
 
-## Installation
-Install `new-engine-cli` via `npm` globally.
-
-```sh
-npm install new-engine-cli -g
-```
-
-## Usage
-Use `new` to generate your game project.
-
-```sh
-new-engine new <name>
+## How to use
+```bash
+npm run watch
 ```
 
 ## License
