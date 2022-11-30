@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- JS Console for mobile browsers (enable if developing) -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/c-kick/mobileConsole/hnl.mobileconsole.min.js"></script> -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Your game title</title>
+
+    <!-- Styling -->
+    <style>
+        html,
+        body {
+            background-color: rgb(34, 50, 44);
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            border: 0;
+            overflow: hidden;
+            display: block;
+        }
+
+        #canvas {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: rgb(34, 50, 44);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Canvas -->
+    <canvas id="canvas"></canvas>
+
+    <!-- Game script -->
+    <script src="bundle.js"></script>
+</body>
+
+</html>
