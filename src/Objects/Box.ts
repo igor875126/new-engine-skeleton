@@ -7,7 +7,7 @@ import SpriteObject from "new-engine/build/Objects/SpriteObject";
 import Time from "new-engine/build/Engine/Time";
 import Text from "./Text";
 
-export default class extends SpriteObject {
+export default class Box extends SpriteObject {
     public width: number = 64;
     public height: number = 64;
     public angle: number = 0;
@@ -22,7 +22,16 @@ export default class extends SpriteObject {
      * Start
      */
     public start(): void {
-        this.linkToTextObject = this.core.gameObjectsManager.getByName('MyCustomTextObject') as Text;
+        this.linkToTextObject = this.core.gameObjectsManager.getByName('MyCustomTextObject') as unknown as Text;
+        this.core.eventManager.listenForEvent(this, 'hello-from-test', (name) => this.onHelloFromTest(name));
+    }
+
+    /**
+     * On hello from test
+     */
+    public onHelloFromTest(name: string): void {
+        console.log('Box says: hello-from-test event just happened with data:' + name);
+        this.onMouseClick();
     }
 
     /**
