@@ -6,12 +6,16 @@ import Vector2 from "new-engine/build/Engine/Vector2";
 import SpriteObject from "new-engine/build/Objects/SpriteObject";
 import Time from "new-engine/build/Engine/Time";
 import Text from "./Text";
+import Shadow from "new-engine/build/Engine/Shadow";
 
 export default class Box extends SpriteObject {
+
+
     public width: number = 64;
     public height: number = 64;
     public angle: number = 0;
     public sprite: Sprite | null = new Sprite('box-1', 0, 0, 64, 64);
+    public shadow: Shadow | null = new Shadow(10, new Color(255, 255, 0, 1));
     public color: Color = new Color(255, 255, 255, 1);
     public position: Vector2 = new Vector2(this.core.canvas.width / 2, this.core.canvas.height / 2);
     public collider: RectCollider | CircleCollider | null = new RectCollider(new Vector2(64, 64), new Vector2(-32, -32));
@@ -40,6 +44,9 @@ export default class Box extends SpriteObject {
     public update(): void {
         this.angle = Math.sin(this.sinusCounter) * 20;
         this.sinusCounter += 2 * Time.deltaTime;
+        if (this.sinusCounter >= 360) {
+            this.sinusCounter = 0;
+        }
     }
 
     /**

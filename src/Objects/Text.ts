@@ -11,7 +11,7 @@ export default class Text extends TextObject {
     public fontName: string = 'UpheavalPro';
     public fontSize: number = 25;
     public color: Color = new Color(255, 128, 75, 0);
-    public position: Vector2 = new Vector2(this.core.canvas.width / 2, this.core.canvas.height / 2 - 50);
+    public position: Vector2 = new Vector2(this.core.canvas.width / 2, this.core.canvas.height / 2 - 65);
     public collider: RectCollider | CircleCollider | null = null;
 
     /**
