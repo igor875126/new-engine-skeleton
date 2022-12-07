@@ -23,6 +23,6 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "new-engine": "^2.0.2"
+    "new-engine": "^2.0.3"
   }
 }

@@ -8,6 +8,8 @@ export default class Test extends EmptyObject {
 
     public position: Vector2 = new Vector2(0, 0);
     public collider: RectCollider | CircleCollider | null = null;
+    public renderingLayer: number = 1;
+    public unaffectedByCamera: boolean = false;
     private eventSent: boolean = false;
 
     /**

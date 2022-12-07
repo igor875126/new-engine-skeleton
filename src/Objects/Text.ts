@@ -13,6 +13,8 @@ export default class Text extends TextObject {
     public color: Color = new Color(255, 128, 75, 0);
     public position: Vector2 = new Vector2(this.core.canvas.width / 2, this.core.canvas.height / 2 - 65);
     public collider: RectCollider | CircleCollider | null = null;
+    public renderingLayer: number = 1;
+    public unaffectedByCamera: boolean = false;
 
     /**
      * Set text by using Locale class

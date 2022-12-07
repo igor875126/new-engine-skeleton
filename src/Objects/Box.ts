@@ -10,7 +10,6 @@ import Shadow from "new-engine/build/Engine/Shadow";
 
 export default class Box extends SpriteObject {
 
-
     public width: number = 64;
     public height: number = 64;
     public angle: number = 0;
@@ -19,6 +18,8 @@ export default class Box extends SpriteObject {
     public color: Color = new Color(255, 255, 255, 1);
     public position: Vector2 = new Vector2(this.core.canvas.width / 2, this.core.canvas.height / 2);
     public collider: RectCollider | CircleCollider | null = new RectCollider(new Vector2(64, 64), new Vector2(-32, -32));
+    public renderingLayer: number = 1;
+    public unaffectedByCamera: boolean = false;
     private sinusCounter = 0;
     private linkToTextObject: Text;
 
