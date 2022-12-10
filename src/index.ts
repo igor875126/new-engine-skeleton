@@ -5,7 +5,13 @@ import Scene1 from './Scenes/Scene1';
 const canvas = document.getElementById('canvas') as any;
 
 // Instantiate engine
-const core = new Core(canvas, 'en', 'development');
+const core = new Core(canvas, {
+    language: 'en',
+    environment: 'development',
+    rendererOptions: {
+        imageSmoothingEnabled: true
+    },
+});
 
 // Instantiate scenes
 const scene1 = new Scene1(['Assets/Images/box-1.png'], ['Assets/Fonts/UpheavalPro.ttf'], ['Assets/Sounds/crack-1.mp3'], ['Assets/Locales/locale-1.json']);
