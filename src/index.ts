@@ -8,6 +8,10 @@ const canvas = document.getElementById('canvas') as any;
 const core = new Core(canvas, {
     language: 'en',
     environment: 'development',
+    debug: {
+        toggleFpsRenderingAtStart: true,
+        toggleDebugColliderRenderingAtStart: false,
+    },
     rendererOptions: {
         imageSmoothingEnabled: true
     },

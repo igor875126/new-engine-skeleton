@@ -24,6 +24,6 @@
     "webpack-obfuscator": "^3.5.1"
   },
   "dependencies": {
-    "new-engine": "^2.1.2"
+    "new-engine": "^3.0.1"
   }
 }
